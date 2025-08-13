@@ -14,7 +14,7 @@ let ble = {device:null, chVolt:null, chMeas:null};
 async function bleConnect(){
   try {
     const device = await navigator.bluetooth.requestDevice({
-      filters: [{ name: 'ESP32C3-Mesures' }],
+      filters: [{ name: 'ESP32S3-Mesures' }],
       optionalServices: [SERVICE_UUID]
     });
     const server = await device.gatt.connect();
